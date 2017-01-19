@@ -38,7 +38,7 @@
 ```
 
 ### appDelegate的rootviewcontroller切换影响
-![](/assets/VC.png)
+![](../assets/VC.png)
 
 - 如图，现在在v2的逻辑中，需要进入一个条件判断，如果为yes,则跳转到mainVC;如果是no，则需要跳转到loginVC.
 - 由于跳转过后，需要mainVC 或者loginvc重新加载（比如重新执行viewDidLoad函数），不能直接pop或者push

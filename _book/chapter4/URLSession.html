@@ -1,0 +1,748 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>URLSession · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chapter5/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    一.gitbook/git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/Gitbook-setUp.html">
+            
+                <a href="../chapter1/Gitbook-setUp.html">
+            
+                    
+                    GitBook安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    二.viewController
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/appdelegate切换根视图.html">
+            
+                <a href="../chapter2/appdelegate切换根视图.html">
+            
+                    
+                    appdelegate切换根视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/NavigationBar.html">
+            
+                <a href="../chapter2/NavigationBar.html">
+            
+                    
+                    导航栏控件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    三.绘图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/绘图.html">
+            
+                <a href="../chapter3/绘图.html">
+            
+                    
+                    绘图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/CAShapLayer.html">
+            
+                <a href="../chapter3/CAShapLayer.html">
+            
+                    
+                    CAShapLayer使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    四.NetWork
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="URLSession.html">
+            
+                <a href="URLSession.html">
+            
+                    
+                    URLSession
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5/">
+            
+                <a href="../chapter5/">
+            
+                    
+                    五.错误及问题记录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/wrong.html">
+            
+                <a href="../chapter5/wrong.html">
+            
+                    
+                    错误记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >URLSession</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="using-nsurlsession">Using NSURLSession</h2>
+<ul>
+<li><code>NSURLSession</code>&#x63D0;&#x4F9B; <code>HTTP</code>&#x65B9;&#x5F0F;&#x4E0B;&#x8F7D; &#x7684; API<ul>
+<li>&#x8BE5;API &#x63D0;&#x4F9B; &#x8BB8;&#x591A;&#x4EE3;&#x7406;&#x65B9;&#x6CD5;&#x6765;&#x5B9E;&#x73B0; <code>&#x8BA4;&#x8BC1;</code>&#xFF0C;<code>&#x540E;&#x53F0;&#x4E0B;&#x8F7D;</code></li>
+<li>&#x4F7F;&#x7528;API&#x65F6;&#xFF0C;app &#x521B;&#x5EFA;&#x4E00;&#x4E9B;&#x5217;&#x7684; sessions&#xFF0C;&#x6BCF;&#x4E2A;session&#x5305;&#x62EC;&#x76F8;&#x5173;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x4EFB;&#x52A1;</li>
+<li>&#x5F02;&#x6B65;&#x7684;</li>
+<li>&#x63D0;&#x4F9B; &#x4E0B;&#x8F7D;&#x72B6;&#x6001; &#x548C; &#x4E0B;&#x8F7D;&#x8FDB;&#x5EA6;</li>
+<li>&#x63D0;&#x4F9B; &#x53D6;&#x6D88;&#xFF0C;&#x91CD;&#x65B0;&#x5F00;&#x59CB;&#xFF0C;&#x6682;&#x505C; &#x4EFB;&#x52A1;</li>
+</ul>
+</li>
+</ul>
+<h2 id="understanding-url-session-concepts">Understanding URL Session Concepts</h2>
+<ul>
+<li>session &#x4E2D; &#x4EFB;&#x52A1; &#x7684;&#x884C;&#x4E3A;&#x53D6;&#x51B3;&#x4E8E;&#xFF1A;<ul>
+<li>the type of session</li>
+<li>the type of task</li>
+<li>whether the app was in the foreground when the task was created.</li>
+</ul>
+</li>
+</ul>
+<h4 id="types-of-session">Types of session</h4>
+<ul>
+<li>Default sessions <ul>
+<li>&#x7F13;&#x5B58;&#x5728; &#x786C;&#x76D8;&#xFF0C;&#x5E76;&#x5728; &#x94A5;&#x5319;&#x94FE; &#x4E2D;&#x5B58;&#x50A8; <code>credentials</code></li>
+</ul>
+</li>
+<li>Ephemeral sessions<ul>
+<li>&#x6240;&#x6709;&#x90FD;&#x5B58;&#x50A8;&#x5728; RAM&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x4E0E;session&#x7ED1;&#x5B9A;&#xFF0C;&#x5728;session&#x88AB;invalidates&#x65F6;&#xFF0C;&#x81EA;&#x52A8;&#x6E05;&#x9664;</li>
+</ul>
+</li>
+<li>Background sessions <ul>
+<li>&#x4E0E;Default sessions&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x662F; &#x6709;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x8FDB;&#x7A0B;&#x6765;&#x5904;&#x7406; &#x6570;&#x636E;&#x4F20;&#x8F93;&#xFF0C;&#x5E76;&#x6709; &#x7279;&#x6B8A;&#x9650;&#x5236;&#xFF0C;&#x53C2;&#x8003;<code>Background Transfer Considerations</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="types-of-tasks">Types of Tasks</h4>
+<ul>
+<li>Data tasks<ul>
+<li>&#x4F7F;&#x7528; <code>NSData</code>  &#x6765; &#x53D1;&#x9001;&#x548C; &#x63A5;&#x6536; &#x6570;&#x636E;</li>
+<li>&#x9002;&#x7528;&#x4E8E; &#x77ED;&#x65F6;&#xFF0C;&#x4EA4;&#x4E92;&#x5F0F;&#x7684;&#x8BF7;&#x6C42;</li>
+</ul>
+</li>
+<li>Download tasks <ul>
+<li>&#x4F7F;&#x7528; &#x6587;&#x4EF6; &#x63A5;&#x6536; &#x6570;&#x636E;</li>
+<li>&#x652F;&#x6301; &#x540E;&#x53F0;&#x4E0B;&#x8F7D;&#xFF08;&#x5F53;app &#x4E0D;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#xFF09;</li>
+</ul>
+</li>
+<li>Upload tasks<ul>
+<li>&#x4F7F;&#x7528; &#x6587;&#x4EF6; &#x4E0A;&#x4F20;&#x6570;&#x636E;</li>
+<li>&#x652F;&#x6301; &#x540E;&#x53F0;&#x4E0A;&#x4F20; &#xFF08;&#x5F53;app &#x4E0D;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#xFF09;</li>
+</ul>
+</li>
+</ul>
+<h4 id="background-transfer-considerations">Background Transfer Considerations</h4>
+<ul>
+<li>&#x53EA;&#x6709;&#x4F7F;&#x7528; <code>background session configuration</code>&#x4E4B;&#x540E; &#x624D;&#x80FD;&#x652F;&#x6301;</li>
+<li>&#x7531;&#x4E8E; &#x5B9E;&#x9645;&#x7684;&#x4F20;&#x8F93; &#x662F;&#x5728;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684; &#x8FDB;&#x7A0B;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x91CD;&#x542F; app&#x7684;&#x8FDB;&#x7A0B; &#x4EE3;&#x4EF7;&#x76F8;&#x5BF9;&#x9AD8;&#xFF0C;&#x56E0;&#x6B64;&#x6709;&#x4E00;&#x4E9B;&#x7279;&#x6027;&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x5BFC;&#x81F4;&#x4E0B;&#x9762;&#x51E0;&#x4E2A;&#x9650;&#x5236;<ul>
+<li>session &#x5FC5;&#x987B;&#x63D0;&#x4F9B; <code>event delivery</code>&#x7684;&#x4EE3;&#x7406;</li>
+<li>&#x4EC5;&#x4EC5;&#x652F;&#x6301;<code>HTTP,HTTPS</code>,&#x4E0D;&#x652F;&#x6301;<code>custom protocols</code></li>
+<li>&#x4EC5;&#x652F;&#x6301; &#x4ECE;&#x6587;&#x4EF6;&#x7684;&#x4E0A;&#x4F20;&#x4EFB;&#x52A1;</li>
+<li>&#x5982;&#x679C; &#x540E;&#x53F0;&#x4F20;&#x8F93; &#x662F;&#x5F53; app&#x5728;&#x540E;&#x53F0;&#x65F6;&#x521D;&#x59CB;&#x5316;&#x7684;&#xFF0C;&#x5219;configuration&#x5BF9;&#x8C61;&#x7684; discretionary&#x5C5E;&#x6027;&#x88AB;&#x5F53;&#x505A;true</li>
+</ul>
+</li>
+</ul>
+<h4 id="ios-relaunched">iOS relaunched</h4>
+<ul>
+<li>&#x5F53; &#x540E;&#x53F0;&#x4F20;&#x8F93; <code>&#x5B8C;&#x6210;</code> &#x6216;&#x8005; <code>&#x9700;&#x8981; credentials</code>&#x65F6;&#xFF0C;&#x5982;&#x679C;app<code>&#x4E0D;&#x5728;&#x8FD0;&#x884C;</code>&#xFF0C;&#x5219;iOS&#x4F1A;&#x5728;&#x540E;&#x53F0;<code>&#x81EA;&#x52A8;relaunched</code>&#x4F60;&#x7684;app&#xFF0C;&#x5E76;&#x8C03;&#x7528;<code>UIApplicationDelegate</code> &#x4E2D;&#x7684;</li>
+</ul>
+<pre><code class="lang-objective-c">// &#x5F53; app &#x5DF2;&#x7ECF; &#x6709; &#x5BF9;&#x5E94;&#x4E8E; identifier&#x7684; session &#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x4E14;&#x6B64;&#x65F6; app &#x5904;&#x4E8E; running &#x6216;&#x8005; suspended&#x72B6;&#x6001;&#xFF0C;&#x5219;&#x4E0D;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; session  &#x5728;&#x6B64;&#x65B9;&#x6CD5;&#x4E2D;&#x3002; &#x6B64;&#x65F6;&#xFF0C;suspended apps &#x4F1A;&#x88AB;&#x8F6C;&#x5230; background&#xFF0C;&#x4E00;&#x65E6;app&#x8FDB;&#x5165;running&#xFF0C;identifier &#x5BF9;&#x5E94;&#x7684; NSURLSession &#x6B63;&#x5E38;&#x63A5;&#x6536; events &#x548C; &#x6B63;&#x5E38; &#x5904;&#x7406;
+// &#x5982;&#x679C; app &#x6CA1;&#x6709; &#x5BF9;&#x5E94; session&#xFF0C;&#x5219; &#x9700;&#x8981;&#x65B0;&#x5EFA; identifier &#x5BF9;&#x5E94;&#x7684; session &#x548C; NSURLSession &#x5BF9;&#x8C61;&#xFF0C;&#x7528;&#x6765;&#x5904;&#x7406; event
+- (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier
+  completionHandler:(void (^)())completionHandler
+{
+    /*
+     Store the completion handler. The completion handler is invoked by the view controller&apos;s checkForAllDownloadsHavingCompleted method (if all the download tasks have been completed).
+     */
+    self.backgroundSessionCompletionHandler = completionHandler;
+}
+</code></pre>
+<p>&#x65B9;&#x6CD5;. &#x8BE5;&#x65B9;&#x6CD5; &#x7528;&#x6765; &#x4FDD;&#x5B58; <code>completionHandler</code>&#x3002;</p>
+<ul>
+<li><p>&#x5F53;session&#x5B8C;&#x6210;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x540E;&#x53F0;&#x4E0B;&#x8F7D;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;&#x7ED9;&#x5176;&#x4EE3;&#x7406;&#x53D1;&#x9001;&#x4E00;&#x4E2A;</p>
+<pre><code class="lang-objective-c">// &#x544A;&#x8BC9; delegate &#xFF0C;session &#x4E2D;&#x7684; &#x6240;&#x6709; messages  &#x90FD;&#x88AB; &#x4F20;&#x9001;
+- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession *)session
+{
+    APLAppDelegate *appDelegate = (APLAppDelegate *)[[UIApplication sharedApplication] delegate];
+    if (appDelegate.backgroundSessionCompletionHandler) {
+        // &#x62FF;&#x5230; appdelegate &#x4E2D;&#x4FDD;&#x5B58;&#x7684; completionHandler
+        void (^completionHandler)() = appDelegate.backgroundSessionCompletionHandler;
+        // &#x6E05;&#x7A7A;
+        appDelegate.backgroundSessionCompletionHandler = nil;
+        // &#x6267;&#x884C;&#xFF0C;&#x6CE8;&#x610F; &#x8BE5; &#x65B9;&#x6CD5; &#x9700;&#x8981;&#x5728; &#x4E3B;&#x7EBF;&#x7A0B;  &#x4E2D; &#x6267;&#x884C;
+        completionHandler();
+    }
+
+    NSLog(@&quot;All tasks are finished&quot;);
+}
+</code></pre>
+<p>&#x6D88;&#x606F;&#xFF0C;&#x5728;&#x4EE3;&#x7406;&#x7684;&#x8BE5;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x8C03;&#x7528;&#x4E0A;&#x8FF0; completion handler&#xFF0C;&#x4EE5;&#x4FBF;&#x4E8E;&#x8BA9; OS&#x77E5;&#x9053; &#x5E94;&#x5F53; suspend &#x4F60;&#x7684;app</p>
+</li>
+<li><p>&#x5F53; app &#x5904;&#x4E8E; suspended&#x65F6;&#xFF0C;&#x5982;&#x679C; &#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#xFF0C;&#x5219;&#x4EE3;&#x7406;&#x7684;<code>URLSession:downloadTask:didFinishDownloadingToURL:</code>&#x4F1A;&#x88AB;&#x8C03;&#x7528;</p>
+</li>
+<li><p>&#x5F53;&#x4EFB;&#x52A1;&#x9700;&#x8981;credentials&#xFF0C;&#x4EE3;&#x7406;&#x7684;<code>URLSession:task:didReceiveChallenge:completionHandler:</code>&#x6216;&#x8005;</p>
+</li>
+</ul>
+<p>&#x200B;        <code>URLSession:didReceiveChallenge:completionHandler:</code>&#x88AB;&#x8C03;&#x7528;</p>
+<h2 id="life-cycle-of-a-url-session">Life Cycle of a URL Session</h2>
+<p>&#x4E24;&#x79CD;&#x4F7F;&#x7528; NSURLSession API &#x7684;&#x65B9;&#x6CD5;</p>
+<ul>
+<li>&#x4F7F;&#x7528; &#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684; delegate</li>
+<li>&#x4F7F;&#x7528; &#x81EA;&#x5B9A;&#x4E49; delegate<ul>
+<li>&#x5F53; app &#x6CA1;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x4F7F;&#x7528; background sessions &#x6765; &#x4E0B;&#x8F7D;&#x6216;&#x8005; &#x4E0A;&#x4F20;</li>
+<li>&#x81EA;&#x5B9A;&#x4E49; &#x8BA4;&#x8BC1;</li>
+<li>&#x81EA;&#x5B9A;&#x4E49; SSL &#x8BC1;&#x4E66;&#x68C0;&#x67E5;</li>
+<li>&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x5E94;&#x8BE5;&#x4E0B;&#x8F7D;&#x5230;&#x78C1;&#x76D8;&#x6216;&#x8005;&#x663E;&#x793A;&#x57FA;&#x4E8E;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684;MIME&#x7C7B;&#x578B;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x7684;&#x7C7B;&#x4F3C;&#x6807;&#x51C6;</li>
+<li>&#x4ECE;&#x4F20;&#x8F93;&#x6D41;&#x4E2D;&#x62FF;&#x6570;&#x636E;&#x4E0A;&#x4F20;(&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;NSData&#x5BF9;&#x8C61;)</li>
+<li>&#x4EE5;&#x7F16;&#x7A0B;&#x65B9;&#x5F0F;&#x9650;&#x5236;&#x7F13;&#x5B58;</li>
+<li>&#x4EE5;&#x7F16;&#x7A0B;&#x65B9;&#x5F0F;&#x9650;&#x5236;HTTP&#x91CD;&#x5B9A;&#x5411;</li>
+</ul>
+</li>
+</ul>
+<h4 id="life-cycle-of-a-url-session-with-system-provided-delegates">Life Cycle of a URL Session with System-Provided Delegates</h4>
+<p>&#x524D;&#x63D0;&#xFF1A;&#x6CA1;&#x6709;&#x63D0;&#x4F9B; delegate &#x5BF9;&#x8C61;</p>
+<ul>
+<li><ol>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; session configuration&#x3002;&#x5BF9;&#x5E94;background sessions&#xFF0C;&#x5FC5;&#x987B;&#x5305;&#x542B;&#x4E00;&#x4E2A;unique identifier</li>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; session&#xFF0C;&#x5E76;&#x5236;&#x5B9A; &#x4E0A;&#x8FF0;&#x7684; configuration object&#xFF0C;&#x8BBE;&#x7F6E; delegate &#x4E3A; nil</li>
+<li>&#x521B;&#x5EFA; task &#x5BF9;&#x8C61;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A; task &#x5BF9;&#x8C61; &#x90FD;&#x8868;&#x793A;&#x4E00;&#x4E2A; &#x8D44;&#x6E90;request<ul>
+<li>&#x6BCF;&#x4E2A; task &#x521D;&#x59CB; &#x72B6;&#x6001; &#x5747;&#x4E3A; susended state&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x7528; resume &#x6765;&#x5F00;&#x59CB;</li>
+<li>task  &#x5747;&#x4E3A; NSURLSessionTask &#x7684;&#x5B50;&#x7C7B;&#xFF0C;&#x5206;&#x4E3A; NSURLSessionDataTask,NSURLSessionUploadTask,NSURLSessionDownloadTask</li>
+<li>&#x9700;&#x8981;&#x5728;&#x521B;&#x5EFA; task&#x65F6;&#x4F7F;&#x7528;&#x5E26;&#x6709; completionHandler&#x53C2;&#x6570;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x5230;&#x6570;&#x636E;</li>
+</ul>
+</li>
+<li>task &#x5B8C;&#x6210;&#x65F6;&#xFF0C;NSURLSession &#x8C03;&#x7528; task &#x7684; completion handler<ul>
+<li>error &#x53C2;&#x6570; &#x4EE3;&#x8868;&#x7684;&#x662F; client-side errors&#x3002;Server-side errors &#x5219;&#x9700;&#x8981;&#x4ECE;HTTP status code &#x6765;&#x8FA8;&#x522B;</li>
+</ul>
+</li>
+<li>&#x5BF9;&#x4E8E;&#x4E0D;&#x9700;&#x8981;&#x7684; session &#xFF0C;&#x9700;&#x8981; invalidate it&#xFF0C;&#x901A;&#x8FC7;<code>invalidateAndCancel</code> &#x6216;&#x8005; <code>finishTasksAndInvalidate</code>.&#x524D;&#x8005; &#x76F4;&#x63A5; &#x53D6;&#x6D88;&#x4EFB;&#x52A1;&#xFF0C;&#x540E;&#x8005; &#x7B49;&#x5F85;&#x4EFB;&#x52A1;&#x5B8C;&#x6210;</li>
+</ol>
+</li>
+</ul>
+<h4 id="life-cycle-of-a-url-session-with-custom-delegates">Life Cycle of a URL Session with Custom Delegates</h4>
+<ul>
+<li><ol>
+<li><p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; session configuration&#x3002;&#x5BF9;&#x5E94;background sessions&#xFF0C;&#x5FC5;&#x987B;&#x5305;&#x542B;&#x4E00;&#x4E2A;unique identifier</p>
+</li>
+<li><p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; session&#xFF0C;&#x5E76;&#x5236;&#x5B9A; &#x4E0A;&#x8FF0;&#x7684; configuration object&#xFF0C;&#x8BBE;&#x7F6E; delegate</p>
+</li>
+<li><p>&#x521B;&#x5EFA; task &#x5BF9;&#x8C61;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A; task &#x5BF9;&#x8C61; &#x90FD;&#x8868;&#x793A;&#x4E00;&#x4E2A; &#x8D44;&#x6E90;request</p>
+</li>
+<li><p>&#x5982;&#x679C; server &#x8FD4;&#x56DE; status code &#x8868;&#x793A; &#x9700;&#x8981; authentication &#xFF0C;&#x5E76;&#x4E14;authentication&#x9700;&#x8981; connection-level challenge&#xFF0C;&#x5219;</p>
+<ul>
+<li><p>&#x5BF9;&#x4E8E; Session-level challenges </p>
+<p>&#x4EE3;&#x7406;&#x7684;<code>URLSession:didReceiveChallenge:completionHandler:</code>&#x65B9;&#x6CD5;&#x88AB;&#x8C03;&#x7528;</p>
+</li>
+<li><p>&#x5BF9;&#x4E8E; non-session-level challenges </p>
+<p>&#x4EE3;&#x7406;&#x7684; <code>URLSession:task:didReceiveChallenge:completionHandler:</code>&#x88AB;&#x8C03;&#x7528;</p>
+</li>
+</ul>
+</li>
+<li><p>&#x5982;&#x679C;&#x63A5;&#x6536;&#x5230; HTTP &#x91CD;&#x5B9A;&#x5411;</p>
+</li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li><p>&#x4F20;&#x8F93;&#x8FDB;&#x5EA6;</p>
+<ul>
+<li><p>download task</p>
+<p><code>URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:</code> </p>
+<p>&#x5982;&#x679C;&#x4F20;&#x8F93;&#x671F;&#x95F4;&#xFF0C;&#x7528;&#x6237;&#x901A;&#x8FC7;<code>cancelByProducingResumeData:</code>  &#x6682;&#x505C;&#x6216;&#x53D6;&#x6D88; task </p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x7528;&#x6237; resume &#x4E0B;&#x8F7D;&#xFF0C;&#x9700;&#x8981; &#x751F;&#x6210;&#x65B0;&#x7684; task&#xFF0C;&#x4F7F;&#x7528;<code>downloadTaskWithResumeData:</code> &#x6216;&#x8005; <code>downloadTaskWithResumeData:completionHandler:</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x4E2D; resumeData &#x4E3A; &#x53D6;&#x6D88;&#x6216;&#x8005; &#x6682;&#x505C; task &#x65F6;&#xFF0C;&#x4FDD;&#x5B58;&#x7684;</p>
+<p>&#x200B;</p>
+</li>
+<li><p>data task</p>
+<p><code>URLSession:dataTask:didReceiveData:</code> </p>
+</li>
+</ul>
+</li>
+<li></li>
+<li><p>&#x5F53; download task &#x6210;&#x529F;&#x5B8C;&#x6210;&#x65F6;&#xFF0C;</p>
+<pre><code class="lang-objective-c">- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)downloadURL
+{
+    /*
+     The download completed, you need to copy the file at targetPath before the end of this block.
+     As an example, copy the file to the Documents directory of your app.
+    */
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+
+    NSArray *URLs = [fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+    NSURL *documentsDirectory = [URLs objectAtIndex:0];
+
+    NSURL *originalURL = [[downloadTask originalRequest] URL];
+    NSURL *destinationURL = [documentsDirectory URLByAppendingPathComponent:[originalURL lastPathComponent]];
+    NSError *errorCopy;
+
+    BOOL success = [fileManager copyItemAtURL:downloadURL toURL:destinationURL error:&amp;errorCopy];
+
+    if (success)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIImage *image = [UIImage imageWithContentsOfFile:[destinationURL path]];
+            self.imageView.image = image;
+            self.imageView.hidden = NO;
+            self.progressView.hidden = YES;
+        });
+    }
+    else
+    {
+        /*
+         In the general case, what you might do in the event of failure depends on the error and the specifics of your application.
+         */
+        BLog(@&quot;Error during the copy: %@&quot;, [errorCopy localizedDescription]);
+    }
+}
+</code></pre>
+<p>&#x65B9;&#x6CD5;&#x88AB;&#x8C03;&#x7528;.&#x5176;&#x4E2D; <code>downloadURL</code> &#x4E3A;&#x4E0B;&#x8F7D;&#x7684;&#x4E34;&#x65F6; &#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x8BE5;&#x65B9;&#x6CD5;return&#x4E4B;&#x524D;&#xFF0C;&#x5C06;&#x6587;&#x4EF6;&#x79FB;&#x52A8;&#x5230;&#x6240;&#x9700;&#x7684;&#x5730;&#x65B9;</p>
+</li>
+<li><p>&#x5F53;&#x6709;&#x4EFB;&#x4F55; task &#x5B8C;&#x6210;&#x65F6;&#xFF0C;</p>
+<pre><code class="lang-objective-c">- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
+</code></pre>
+<p>&#x65B9;&#x6CD5;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x5982;&#x679C;&#x6210;&#x529F;&#xFF0C;&#x5219; error &#x4E3A; nil</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="creating-and-configuring-a-session">Creating and Configuring a Session</h2>
+<h2 id="fetching-resources-using-system-provided-delegates">Fetching Resources Using System-Provided Delegates</h2>
+<p>&#x4F7F;&#x7528; system-provided delegate &#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x65B9;&#x4FBF;&#xFF0C;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x6709;&#x5F88;&#x5927;&#x5C40;&#x9650;&#x6027;</p>
+<ul>
+<li>&#x521B;&#x5EFA; configuration &#x5BF9;&#x8C61; &#x548C; session &#x5BF9;&#x8C61;</li>
+<li>completion handler </li>
+</ul>
+<pre><code class="lang-objective-c">NSURLSession *sessionWithoutADelegate = [NSURLSession sessionWithConfiguration:defaultConfiguration];
+NSURL *url = [NSURL URLWithString:@&quot;https://www.example.com/&quot;];
+
+[[sessionWithoutADelegate dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    NSLog(@&quot;Got response %@ with error %@.\n&quot;, response, error);
+    NSLog(@&quot;DATA:\n%@\nEND DATA\n&quot;, [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}] resume];
+</code></pre>
+<h2 id="fetching-data-using-a-custom-delegate">Fetching Data Using a Custom Delegate</h2>
+<h2 id="downloading-files">Downloading Files</h2>
+<h4 id="download-task-example">Download task example</h4>
+<pre><code class="lang-objective-c">NSURL *url = [NSURL URLWithString:@&quot;https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/ObjC_classic/FoundationObjC.pdf&quot;];
+NSURLSessionDownloadTask *downloadTask = [backgroundSession downloadTaskWithURL:url];
+[downloadTask resume];
+</code></pre>
+<h4 id="delegate-methods-for-download-tasks">Delegate methods for download tasks</h4>
+<pre><code class="lang-objective-c">- (void)URLSession:(NSURLSession *)session
+      downloadTask:(NSURLSessionDownloadTask *)downloadTask
+      didWriteData:(int64_t)bytesWritten
+ totalBytesWritten:(int64_t)totalBytesWritten
+totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
+{
+    NSLog(@&quot;Session %@ download task %@ wrote an additional %lld bytes (total %lld bytes) out of an expected %lld bytes.\n&quot;, session, downloadTask, bytesWritten, totalBytesWritten, totalBytesExpectedToWrite);
+}
+
+- (void)URLSession:(NSURLSession *)session
+      downloadTask:(NSURLSessionDownloadTask *)downloadTask
+ didResumeAtOffset:(int64_t)fileOffset
+expectedTotalBytes:(int64_t)expectedTotalBytes
+{
+    NSLog(@&quot;Session %@ download task %@ resumed at offset %lld bytes out of an expected %lld bytes.\n&quot;, session, downloadTask, fileOffset, expectedTotalBytes);
+}
+
+- (void)URLSession:(NSURLSession *)session
+      downloadTask:(NSURLSessionDownloadTask *)downloadTask
+didFinishDownloadingToURL:(NSURL *)location
+{
+    NSLog(@&quot;Session %@ download task %@ finished downloading to URL %@\n&quot;, session, downloadTask, location);
+
+    // Perform the completion handler for the current session
+    self.completionHandlers[session.configuration.identifier]();
+
+   // Open the downloaded file for reading
+    NSError *readError = nil;
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingFromURL:location error:readError];
+    // ...
+
+   // Move the file to a new URL
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *cacheDirectory = [[fileManager URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask] firstObject];
+    NSError *moveError = nil;
+    if ([fileManager moveItemAtURL:location toURL:cacheDirectory error:moveError]) {
+        // ...
+    }
+}
+</code></pre>
+<h2 id="uploading-body-content">Uploading Body Content</h2>
+<p>HTTP POST request &#x7684; body &#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;3&#x4E2D;&#x65B9;&#x5F0F;:</p>
+<ul>
+<li>NSData &#x5BF9;&#x8C61;<ul>
+<li>&#x5982;&#x679C; app &#x5185;&#x5B58;&#x4E2D;&#x5DF2;&#x7ECF;&#x6709; &#x5B58;&#x5728;&#x7684; &#x6570;&#x636E;&#xFF0C;&#x5219;&#x6700;&#x597D;&#x4F7F;&#x7528; NSData&#x65B9;&#x5F0F;</li>
+</ul>
+</li>
+<li>file<ul>
+<li>&#x9700;&#x8981;&#x4E0A;&#x4F20;&#x7684; &#x662F; &#x786C;&#x76D8; &#x4E0A;&#x7684; &#x4E00;&#x4E2A;&#x6587;&#x4EF6;</li>
+</ul>
+</li>
+<li>stream</li>
+</ul>
+<p>&#x4E0D;&#x7BA1;&#x9009;&#x7528;&#x7684;&#x90A3;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x90FD;&#x9700;&#x8981; &#x5B9E;&#x73B0;</p>
+<pre><code class="lang-objective-c">URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:
+</code></pre>
+<p>&#x65B9;&#x6CD5;&#x6765;&#x83B7;&#x53D6; &#x4E0A;&#x4F20;&#x8FDB;&#x5EA6;</p>
+<h4 id="uploading-body-content-using-an-nsdata-object">Uploading Body Content Using an NSData Object</h4>
+<pre><code class="lang-objective-c">NSURL *textFileURL = [NSURL fileURLWithPath:@&quot;/path/to/file.txt&quot;];
+NSData *data = [NSData dataWithContentsOfURL:textFileURL];
+
+NSURL *url = [NSURL URLWithString:@&quot;https://www.example.com/&quot;];
+NSMutableURLRequest *mutableRequest = [NSMutableURLRequest requestWithURL:url];
+mutableRequest.HTTPMethod = @&quot;POST&quot;;
+[mutableRequest setValue:[NSString stringWithFormat:@&quot;%lld&quot;, data.length] forHTTPHeaderField:@&quot;Content-Type&quot;];
+[mutableRequest setValue:@&quot;text/plain&quot; forHTTPHeaderField:@&quot;Content-Type&quot;];
+
+NSURLSessionUploadTask *uploadTask = [defaultSession uploadTaskWithRequest:mutableRequest fromData:data];
+[uploadTask resume];
+</code></pre>
+<h4 id="uploading-body-content-using-a-file">Uploading Body Content Using a File</h4>
+<pre><code class="lang-objective-c">NSURL *textFileURL = [NSURL fileURLWithPath:@&quot;/path/to/file.txt&quot;];
+
+NSURL *url = [NSURL URLWithString:@&quot;https://www.example.com/&quot;];
+NSMutableURLRequest *mutableRequest = [NSMutableURLRequest requestWithURL:url];
+mutableRequest.HTTPMethod = @&quot;POST&quot;;
+
+NSURLSessionUploadTask *uploadTask = [defaultSession uploadTaskWithRequest:mutableRequest fromFile:textFileURL];
+[uploadTask resume];
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 四.NetWork">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chapter5/" class="navigation navigation-next " aria-label="Next page: 五.错误及问题记录">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"URLSession","level":"1.5.1","depth":2,"next":{"title":"五.错误及问题记录","level":"1.6","depth":1,"path":"chapter5/README.md","ref":"chapter5/README.md","articles":[{"title":"错误记录","level":"1.6.1","depth":2,"path":"chapter5/wrong.md","ref":"chapter5/wrong.md","articles":[]}]},"previous":{"title":"四.NetWork","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[{"title":"URLSession","level":"1.5.1","depth":2,"path":"chapter4/URLSession.md","ref":"chapter4/URLSession.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter4/URLSession.md","mtime":"2017-01-17T01:25:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-19T19:17:18.823Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

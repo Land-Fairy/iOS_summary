@@ -1,8 +1,15 @@
 # Summary
 
 * [Introduction](README.md)
-* [Chapter1](chapter1/README.md)
+* [一.gitbook/git](chapter1/README.md)
     * [GitBook安装](chapter1/Gitbook-setUp.md)
-* [Chapter2](chapter2/README.md)
+* [二.viewController](chapter2/README.md)
     * [appdelegate切换根视图](chapter2/appdelegate切换根视图.md)
     * [导航栏控件](chapter2/NavigationBar.md)
+* [三.绘图](chapter3/README.md)
+    * [绘图](chapter3/绘图.md)
+    * [CAShapLayer使用](chapter3/CAShapLayer.md)
+* [四.NetWork](chapter4/README.md)
+    * [URLSession](chapter4/URLSession.md)
+* [五.错误及问题记录](chapter5/README.md)
+    * [错误记录](chapter5/wrong.md)
