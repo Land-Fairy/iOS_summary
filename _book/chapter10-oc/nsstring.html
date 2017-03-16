@@ -1,0 +1,1469 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>NSString · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="unsafeunretained--bridge.html" />
+    
+    
+    <link rel="prev" href="修改类私有属性.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1-git&gitbook/">
+            
+                <a href="../chapter1-git&gitbook/">
+            
+                    
+                    一.gitbook/git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1-git&gitbook/Gitbook-setUp.html">
+            
+                <a href="../chapter1-git&gitbook/Gitbook-setUp.html">
+            
+                    
+                    GitBook安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1-git&gitbook/git-提交.html">
+            
+                <a href="../chapter1-git&gitbook/git-提交.html">
+            
+                    
+                    Git-使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2-控制器/">
+            
+                <a href="../chapter2-控制器/">
+            
+                    
+                    二.控制器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2-控制器/appdelegate切换根视图.html">
+            
+                <a href="../chapter2-控制器/appdelegate切换根视图.html">
+            
+                    
+                    appdelegate切换根视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2-控制器/NavigationBar.html">
+            
+                <a href="../chapter2-控制器/NavigationBar.html">
+            
+                    
+                    导航栏控件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2-控制器/uiviewcontroller-跳转.html">
+            
+                <a href="../chapter2-控制器/uiviewcontroller-跳转.html">
+            
+                    
+                    页面跳转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2-控制器/uiviewcontroll-引用计数问题.html">
+            
+                <a href="../chapter2-控制器/uiviewcontroll-引用计数问题.html">
+            
+                    
+                    引用计数问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter2-控制器/控制器loadview方法.html">
+            
+                <a href="../chapter2-控制器/控制器loadview方法.html">
+            
+                    
+                    LoadView方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../chapter2-控制器/uinavigation.html">
+            
+                <a href="../chapter2-控制器/uinavigation.html">
+            
+                    
+                    UINavigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../chapter2-控制器/uiviewcontroller分类.html">
+            
+                <a href="../chapter2-控制器/uiviewcontroller分类.html">
+            
+                    
+                    分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3-绘图&动画/">
+            
+                <a href="../chapter3-绘图&动画/">
+            
+                    
+                    三.绘图& 动画
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3-绘图&动画/绘图.html">
+            
+                <a href="../chapter3-绘图&动画/绘图.html">
+            
+                    
+                    绘图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3-绘图&动画/画图.html">
+            
+                <a href="../chapter3-绘图&动画/画图.html">
+            
+                    
+                    画图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3-绘图&动画/CAShapLayer.html">
+            
+                <a href="../chapter3-绘图&动画/CAShapLayer.html">
+            
+                    
+                    CAShapLayer使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3-绘图&动画/ios动画.html">
+            
+                <a href="../chapter3-绘图&动画/ios动画.html">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3-绘图&动画/transform.html">
+            
+                <a href="../chapter3-绘图&动画/transform.html">
+            
+                    
+                    变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter3-绘图&动画/uiimage的缓存.html">
+            
+                <a href="../chapter3-绘图&动画/uiimage的缓存.html">
+            
+                    
+                    UIImage-缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4-网络/">
+            
+                <a href="../chapter4-网络/">
+            
+                    
+                    四.NetWork
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4-网络/URLSession.html">
+            
+                <a href="../chapter4-网络/URLSession.html">
+            
+                    
+                    URLSession
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5-问题记录/">
+            
+                <a href="../chapter5-问题记录/">
+            
+                    
+                    五.错误及问题记录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5-问题记录/wrong.html">
+            
+                <a href="../chapter5-问题记录/wrong.html">
+            
+                    
+                    错误记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter6-地图/">
+            
+                <a href="../chapter6-地图/">
+            
+                    
+                    六.地图&定位
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter6-地图/map.html">
+            
+                <a href="../chapter6-地图/map.html">
+            
+                    
+                    地图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter6-地图/location.html">
+            
+                <a href="../chapter6-地图/location.html">
+            
+                    
+                    定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter7-cocopads/">
+            
+                <a href="../chapter7-cocopads/">
+            
+                    
+                    七.cocopods使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter7-cocopads/cocopods.html">
+            
+                <a href="../chapter7-cocopads/cocopods.html">
+            
+                    
+                    cocopods
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../chapter8-上架&真机调试/">
+            
+                <a href="../chapter8-上架&真机调试/">
+            
+                    
+                    八.上架&&真机调试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter8-上架&真机调试/app-store-上架.html">
+            
+                <a href="../chapter8-上架&真机调试/app-store-上架.html">
+            
+                    
+                    上架
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../chapter9-tableview/">
+            
+                <a href="../chapter9-tableview/">
+            
+                    
+                    九.UITableView
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../chapter9-tableview/uitable.html">
+            
+                <a href="../chapter9-tableview/uitable.html">
+            
+                    
+                    UITableView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../chapter9-tableview/uirefreshcontrol.html">
+            
+                <a href="../chapter9-tableview/uirefreshcontrol.html">
+            
+                    
+                    刷新控件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    十.OC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="kvc与kvo.html">
+            
+                <a href="kvc与kvo.html">
+            
+                    
+                    KVC && KVO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="load-initialize.html">
+            
+                <a href="load-initialize.html">
+            
+                    
+                    load && initialize
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="对象初始化.html">
+            
+                <a href="对象初始化.html">
+            
+                    
+                    对象初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="runtime.html">
+            
+                <a href="runtime.html">
+            
+                    
+                    Runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="修改类私有属性.html">
+            
+                <a href="修改类私有属性.html">
+            
+                    
+                    修改类私有属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11.6" data-path="nsstring.html">
+            
+                <a href="nsstring.html">
+            
+                    
+                    NSString
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="unsafeunretained--bridge.html">
+            
+                <a href="unsafeunretained--bridge.html">
+            
+                    
+                    bridge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="内存管理.html">
+            
+                <a href="内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../chapter11-屏幕适配与布局/">
+            
+                <a href="../chapter11-屏幕适配与布局/">
+            
+                    
+                    十一.屏幕适配与布局
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../chapter11-屏幕适配与布局/masonry.html">
+            
+                <a href="../chapter11-屏幕适配与布局/masonry.html">
+            
+                    
+                    masonry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../chapter12-通知/">
+            
+                <a href="../chapter12-通知/">
+            
+                    
+                    十二.通知
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../chapter12-通知/widget.html">
+            
+                <a href="../chapter12-通知/widget.html">
+            
+                    
+                    Widget
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../chapter12-通知/notification.html">
+            
+                <a href="../chapter12-通知/notification.html">
+            
+                    
+                    通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../chapter13-语言&本地化/">
+            
+                <a href="../chapter13-语言&本地化/">
+            
+                    
+                    十三.语言本地化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../chapter13-语言&本地化/修改ios应用名称.html">
+            
+                <a href="../chapter13-语言&本地化/修改ios应用名称.html">
+            
+                    
+                    修改应用名称
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../chapter13-语言&本地化/本地化.html">
+            
+                <a href="../chapter13-语言&本地化/本地化.html">
+            
+                    
+                    本地化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../chapter13-语言&本地化/获取当前系统语言.html">
+            
+                <a href="../chapter13-语言&本地化/获取当前系统语言.html">
+            
+                    
+                    获取当前语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../chapter14-存储固化/">
+            
+                <a href="../chapter14-存储固化/">
+            
+                    
+                    十四.存储固化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../chapter14-存储固化/应用信息本地化.html">
+            
+                <a href="../chapter14-存储固化/应用信息本地化.html">
+            
+                    
+                    固化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../chapter15-自定义控件/">
+            
+                <a href="../chapter15-自定义控件/">
+            
+                    
+                    十五.自定义控件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../chapter15-自定义控件/自定义控件.html">
+            
+                <a href="../chapter15-自定义控件/自定义控件.html">
+            
+                    
+                    自定义控件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../chapter15-自定义控件/popview.html">
+            
+                <a href="../chapter15-自定义控件/popview.html">
+            
+                    
+                    popView
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../chapter16-手势/">
+            
+                <a href="../chapter16-手势/">
+            
+                    
+                    十六.手势
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../chapter16-手势/手势.html">
+            
+                <a href="../chapter16-手势/手势.html">
+            
+                    
+                    手势
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../chapter17-相册&音乐等/">
+            
+                <a href="../chapter17-相册&音乐等/">
+            
+                    
+                    十七.相册&音乐等
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../chapter17-相册&音乐等/通讯录.html">
+            
+                <a href="../chapter17-相册&音乐等/通讯录.html">
+            
+                    
+                    通讯录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../chapter17-相册&音乐等/音效与音乐.html">
+            
+                <a href="../chapter17-相册&音乐等/音效与音乐.html">
+            
+                    
+                    音乐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../chapter18-UIScrolView/UIScrollView.html">
+            
+                <a href="../chapter18-UIScrolView/UIScrollView.html">
+            
+                    
+                    十八.UIScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../chapter19-UITextField/UITextField.md">
+            
+                <span>
+            
+                    
+                    十九.UITextField
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../chapter20-画图/">
+            
+                <a href="../chapter20-画图/">
+            
+                    
+                    二十.画图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.21.1" data-path="../chapter20-画图/1-自定义view.html">
+            
+                <a href="../chapter20-画图/1-自定义view.html">
+            
+                    
+                    自定义view
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.2" data-path="../chapter20-画图/2-绘制直线曲线圆弧等.html">
+            
+                <a href="../chapter20-画图/2-绘制直线曲线圆弧等.html">
+            
+                    
+                    绘制直线曲线圆弧等
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.3" data-path="../chapter20-画图/3-绘制进度条.html">
+            
+                <a href="../chapter20-画图/3-绘制进度条.html">
+            
+                    
+                    绘制进度条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.4" data-path="../chapter20-画图/4-绘制文字图片等.html">
+            
+                <a href="../chapter20-画图/4-绘制文字图片等.html">
+            
+                    
+                    绘制文字图片等
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.5" data-path="../chapter20-画图/5-雪花效果.html">
+            
+                <a href="../chapter20-画图/5-雪花效果.html">
+            
+                    
+                    雪花效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.6" data-path="../chapter20-画图/6-图形上下文栈.html">
+            
+                <a href="../chapter20-画图/6-图形上下文栈.html">
+            
+                    
+                    图形上下文栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.7" data-path="../chapter20-画图/7-图片裁剪等.html">
+            
+                <a href="../chapter20-画图/7-图片裁剪等.html">
+            
+                    
+                    图片裁剪等
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.8" data-path="../chapter20-画图/8-屏幕手选截屏等.html">
+            
+                <a href="../chapter20-画图/8-屏幕手选截屏等.html">
+            
+                    
+                    屏幕手选截屏等
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.9" data-path="../chapter20-画图/9-图片擦除.html">
+            
+                <a href="../chapter20-画图/9-图片擦除.html">
+            
+                    
+                    图片擦除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.10" data-path="../chapter20-画图/10-手势解锁.html">
+            
+                <a href="../chapter20-画图/10-手势解锁.html">
+            
+                    
+                    手势解锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.11" data-path="../chapter20-画图/11-画板.html">
+            
+                <a href="../chapter20-画图/11-画板.html">
+            
+                    
+                    画板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../chapter21-动画/">
+            
+                <a href="../chapter21-动画/">
+            
+                    
+                    二十一.动画
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.22.1" data-path="../chapter21-动画/手势.html">
+            
+                <a href="../chapter21-动画/手势.html">
+            
+                    
+                    手势
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.2" data-path="../chapter21-动画/Transform.html">
+            
+                <a href="../chapter21-动画/Transform.html">
+            
+                    
+                    Transform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3" data-path="../chapter21-动画/CALayer.html">
+            
+                <a href="../chapter21-动画/CALayer.html">
+            
+                    
+                    CALayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.4" data-path="../chapter21-动画/position.html">
+            
+                <a href="../chapter21-动画/position.html">
+            
+                    
+                    position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.5" data-path="../chapter21-动画/core animation.html">
+            
+                <a href="../chapter21-动画/core animation.html">
+            
+                    
+                    core animation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.6" data-path="../chapter21-动画/隐式动画.html">
+            
+                <a href="../chapter21-动画/隐式动画.html">
+            
+                    
+                    隐式动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >NSString</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x7591;&#x95EE;&#xFF1A;&#x5173;&#x4E8E;nsstring-&#x53EF;&#x4EE5;&#x518D;&#x6B21;&#x8D4B;&#x503C;&#x7684;&#x95EE;&#x9898;&#xFF1F;">&#x7591;&#x95EE;&#xFF1A;&#x5173;&#x4E8E;NSString &#x53EF;&#x4EE5;&#x518D;&#x6B21;&#x8D4B;&#x503C;&#x7684;&#x95EE;&#x9898;&#xFF1F;</h2>
+<ul>
+<li>&#x63CF;&#x8FF0;&#xFF1A;NSString&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x8D4B;&#x503C;</li>
+<li>&#x539F;&#x56E0;&#xFF1A;NSString&#x4E0D;&#x53EF;&#x53D8;&#x662F;&#x8BF4;&#xFF0C;&#x751F;&#x6210;&#x7684;&#x4E00;&#x4E2A;NSString&#x8BE5;&#x5BF9;&#x8C61;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x7684;&#xFF08;&#x76F8;&#x5F53;&#x4E8E;const&#xFF09;&#xFF0C;&#x4F46;&#x662F;&#x53D8;&#x91CF;&#x5B58;&#x50A8;&#x7684;&#x53EA;&#x662F;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x91CD;&#x65B0;&#x8D4B;&#x503C;&#x5373;&#x7A7F;&#x4E86;&#x53E6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5730;&#x5740;&#x7ED9;&#x4ED6;&#x3002;&#xFF08;&#x4E0E;&#x6307;&#x5411;const&#x5BF9;&#x8C61;&#x7684;&#x6307;&#x9488;&#x7C7B;&#x4F3C;&#xFF09;&#x3002;</li>
+</ul>
+<h2 id="nsarray">NSArray</h2>
+<ul>
+<li><p>NSArray&#x53EA;&#x80FD;&#x5B58;&#x50A8; Objective-C&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E0D;&#x80FD;&#x5B58;&#x50A8;&#x539F;&#x59CB;&#x7684;C&#x8BED;&#x8A00;&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;</p>
+</li>
+<li><p>NSArray &#x4E0D;&#x80FD;&#x591F;&#x5B58;&#x50A8; nil</p>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x539F;&#x56E0;&#x662F;&#x56E0;&#x4E3A; arrayWithObjects:&#x521B;&#x5EFA;&#x65B0;&#x7684;NSArray&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x5217;&#x8868;&#x7684;&#x7ED3;&#x5C3E;&#x6DFB;&#x52A0;nil,&#x4EE3;&#x8868;&#x5217;&#x8868;&#x7684;&#x7ED3;&#x675F;&#x3002;&#x4F46;&#x4F7F;&#x7528;&#x5B57;&#x9762;&#x91CF;&#x8BED;&#x6CD5;&#x65F6;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x8865;&#x4E0A;Nil</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x679A;&#x4E3E;nsenumerator">&#x679A;&#x4E3E;(NSEnumerator)</h2>
+<h6 id="&#x8BF7;&#x6C42;&#x679A;&#x4E3E;&#x5668;&#x5E76;&#x975E;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;">&#x8BF7;&#x6C42;&#x679A;&#x4E3E;&#x5668;(&#x5E76;&#x975E;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;)</h6>
+<pre><code>- (NSEnumerator *)objectEnumerator;
+</code></pre><h6 id="&#x4ECE;&#x540E;&#x5F80;&#x524D;&#x6D4F;&#x89C8;">&#x4ECE;&#x540E;&#x5F80;&#x524D;&#x6D4F;&#x89C8;</h6>
+<pre><code>- (NSEnumeraotr *)reverseObjectEnumerator;
+</code></pre><h6 id="&#x83B7;&#x53D6;&#x6570;&#x7EC4;&#x4E2D;&#x4E0B;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;">&#x83B7;&#x53D6;&#x6570;&#x7EC4;&#x4E2D;&#x4E0B;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</h6>
+<pre><code>- (id)nextObject;
+</code></pre><h5 id="&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</h5>
+<pre><code>NSEnumerator *enumerator = [array objectEnumerator];
+while(id thingie = [enumerator nextObject])
+{
+//&#x5904;&#x7406;
+}
+</code></pre><h2 id="&#x5FEB;&#x901F;&#x679A;&#x4E3E;">&#x5FEB;&#x901F;&#x679A;&#x4E3E;</h2>
+<h4 id="for-in">for in</h4>
+<h4 id="enumerateobjectsusingblock">enumerateObjectsUsingBlock</h4>
+<pre><code>- (void)enumerateObjectsUsingBlock:
+        (void(^)(id object,NSUInteger idx,BOOL *stop))block
+</code></pre><h5 id="&#x4EE3;&#x7801;&#x5757;&#x7684;&#x597D;&#x5904;&#xFF1F;">&#x4EE3;&#x7801;&#x5757;&#x7684;&#x597D;&#x5904;&#xFF1F;</h5>
+<h2 id="&#x80FD;&#x5426;&#x521B;&#x5EFA;-nsstring-nsarray-&#x6216;-nsdictionary&#x7684;&#x5B50;&#x7C7B;&#xFF1F;">&#x80FD;&#x5426;&#x521B;&#x5EFA; NSString NSArray &#x6216; NSDictionary&#x7684;&#x5B50;&#x7C7B;&#xFF1F;</h2>
+<h4 id="&#x7C7B;&#x7C07;class-clusters&#x7684;&#x6982;&#x5FF5;">&#x7C7B;&#x7C07;(class clusters)&#x7684;&#x6982;&#x5FF5;</h4>
+<h2 id="&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x5C01;&#x88C5;">&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x5C01;&#x88C5;</h2>
+<h4 id="nsnumber">NSNumber</h4>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5C01;&#x88C5;&#x57FA;&#x672C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</li>
+</ul>
+<pre><code>+ (NSNumber *) numberWithChar:(char)value;
+...
+//&#x6216;&#x8005;&#x4F7F;&#x7528;&#x5B57;&#x9762;&#x91CF;&#x8BED;&#x6CD5;
+NSNumber *number = @123;
+</code></pre><hr>
+<h4 id="nsvalue">NSValue</h4>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x5C01;&#x88C5;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x7684;&#x503C;(&#x4F8B;&#xFF1A;&#x7ED3;&#x6784;&#x4F53;)</li>
+</ul>
+<pre><code>+(NSValue *)valueWithBytes:(const void *)value  objCType:(const char *)byte;
+</code></pre><h6 id="&#x3000;&#x4F8B;&#x5982;">&#x3000;&#x4F8B;&#x5982;</h6>
+<pre><code>NSRect rect = NSMakeRect(1,2,30,40);
+NSValue *value = [NSValue valueWithBytes: &amp;rect objCType:@encode(NSRect)];
+//&#x5BF9;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;&#x64CD;&#x4F5C;
+</code></pre><h6 id="&#x63D0;&#x53D6;&#x6570;&#x503C;">&#x63D0;&#x53D6;&#x6570;&#x503C;</h6>
+<pre><code>- (void)getValue:(void *)buffer;
+</code></pre><h6 id="&#x63D0;&#x4F9B;&#x5E38;&#x7528;&#x7684;struct&#x6570;&#x636E;&#x8F6C;&#x4E3A;nsvalue&#x7684;&#x4FBF;&#x6377;&#x65B9;&#x6CD5;">&#x63D0;&#x4F9B;&#x5E38;&#x7528;&#x7684;struct&#x6570;&#x636E;&#x8F6C;&#x4E3A;NSValue&#x7684;&#x4FBF;&#x6377;&#x65B9;&#x6CD5;</h6>
+<pre><code>+ (NSValue *)valueWithPoint:(NSPoint)aPoint;
+- (NSPoint)pointValue;
+</code></pre><hr>
+<h2 id="nsnull">NSNull</h2>
+<p>&#x5982;&#x679C;&#x786E;&#x5B9E;&#x9700;&#x8981;&#x5B58;&#x50A8;&#x4E00;&#x4E2A;&#x8868;&#x793A;&quot;&#x7A7A;&quot;&#x7684;&#x503C;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;NSNull</p>
+<ul>
+<li>&#x5176;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;</li>
+</ul>
+<pre><code>+ (NSNull *)null;
+</code></pre><h4 id="nsnull-&#x4E0E;-nil&#x533A;&#x522B;">NSNull &#x4E0E; nil&#x533A;&#x522B;</h4>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="修改类私有属性.html" class="navigation navigation-prev " aria-label="Previous page: 修改类私有属性">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="unsafeunretained--bridge.html" class="navigation navigation-next " aria-label="Next page: bridge">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"NSString","level":"1.11.6","depth":2,"next":{"title":"bridge","level":"1.11.7","depth":2,"path":"chapter10-oc/unsafeunretained--bridge.md","ref":"chapter10-oc/unsafeunretained--bridge.md","articles":[]},"previous":{"title":"修改类私有属性","level":"1.11.5","depth":2,"path":"chapter10-oc/修改类私有属性.md","ref":"chapter10-oc/修改类私有属性.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter10-oc/nsstring.md","mtime":"2017-03-16T12:44:47.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-16T13:05:11.244Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
