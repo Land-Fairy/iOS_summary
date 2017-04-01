@@ -108,7 +108,7 @@ void myeatMethodIMP(id self, SEL _cmd){
          *  应该 获取 类的  类方法 还是 实例方法，取决于 需要交换的类是  类方法 还是  实例方法
          */
         Method imagIMP = class_getClassMethod([self class], @selector(imageNamed:));
-        
+
         Method dbd_imagIMP = class_getClassMethod([self class], @selector(dbd_imageNamed:));
         /**
          *  交换 两个 方法
@@ -144,6 +144,8 @@ void myeatMethodIMP(id self, SEL _cmd){
 ![](/assets/QQ20170401-212532.png)
 
 > 即：此时 如果 调用 imageNamed：方法，则 会直接 找到  dbd_imageNamed：方法的实现；相当于 原来调用 dbd\_imageNamed方法_
+>
+> * ImageNamed 消息 仍然
 
 
 
