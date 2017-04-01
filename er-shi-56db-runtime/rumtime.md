@@ -25,10 +25,40 @@ objc_msgSend(person,@selector(eat));
 >
 > `+ (BOOL)resolveInstanceMethod:(SEL)sel`  
 > 如果  该 方法 返回的 为 NO（即没有自行处理）,则 会 通过 类对象的 isa 去其 父对象 中进行 继续查找（消息转发）
-
+>
 > 因此，可以在上述 方法 中 ，动态 添加方法即可
 
+```
+/**
+ *  需要动态添加的 eat 方法的 实现
+ *
+ *  @param self 自带的参数
+ *  @param _cmd 自带参数
+ */
+void myeatMethodIMP(id self, SEL _cmd){
+    NSLog(@"My added eat func");
+}
 
++ (BOOL)resolveInstanceMethod:(SEL)sel{
+    /**
+     *  如果是 eat 方法
+     */
+    if(sel == @selector(eat)){
+        /**
+         *  给 类 动态 添加 一个 方法
+         *
+         *  @param class] 要给 哪个  类 添加 方法
+         *  @param sel    添加 方法  sel 名称
+         *  @param IMP    添加 方法 的 实现 的 指针
+         *
+         *  @return 编码过的 参数列表
+         */
+        class_addMethod([self class], sel, (IMP)myeatMethodIMP, "v@:");
+        return YES;
+    }
+    return [super resolveInstanceMethod:sel];
+}
+```
 
 
 
