@@ -145,7 +145,85 @@ void myeatMethodIMP(id self, SEL _cmd){
 
 > 即：此时 如果 调用 imageNamed：方法，则 会直接 找到  dbd_imageNamed：方法的实现；相当于 原来调用 dbd\_imageNamed方法_
 >
-> * ImageNamed 消息 仍然
+> * ImageNamed 消息 仍然 会去 类的 dispatch table里面去寻找 imageNamed 这个IMP
+> * 变得只是 这个IMP 指向的地址而已！！
+
+## 3. 给分类添加属性
+
+### 3.1 分类为什么不能直接添加属性
+
+- @property 在 类 中做了什么？
+> 我们为 DBDPerson类 添加了一些 成员变量 和 属性，然后 打印一下 该类 的 成员变量，属性和方法
+
+
+
+```
+{
+    NSString *string11;
+    NSInteger va12;
+}
+@property (nonatomic, strong) NSString *st1;
+@property (nonatomic, strong) NSString *st2;
+@property (nonatomic, strong) NSString *st3;
+@property (nonatomic, strong) NSString *st4;
+@property (nonatomic, assign) NSInteger va1;
+
+```
+> 然后 写一个 方法，来打印：使用的是RunTime
+
+
+
+```
++ (void)getPropertyUsingRunTime{
+    /**
+     *  获取 该类 中 所有 属性
+     */
+    {
+        unsigned int outCount = 0;
+        objc_property_t *properties = class_copyPropertyList([self class], &outCount);
+        for (int i=0; i<outCount; i++) {
+            objc_property_t property = properties[i];
+            NSLog(@"property---%s  %s",property_getName(property),property_getAttributes(property));
+        }
+    }
+    
+    /**
+     *  获取 该 类中 的 所有 成员变量
+     */
+    {
+        unsigned int outCount = 0;
+        /// Ivar 代表的就是 成员变量
+        Ivar *ivaArray = class_copyIvarList([self class], &outCount);
+        for (int i=0; i<outCount; i++) {
+            Ivar iva = ivaArray[i];
+            NSLog(@"chengyaun---%s",ivar_getName(iva));
+        }
+    }
+    /**
+     *  获取 该类中的 所有方法
+     */
+    {
+        unsigned int outCount = 0;
+        Method * methodArray = class_copyMethodList([self class], &outCount);
+        for (int i=0; i<outCount; i++) {
+            Method method = methodArray[i];
+            NSLog(@"fangfa----%@",NSStringFromSelector(method_getName(method)));
+        }
+    }
+    
+}
+
+
+```
+> 打印结果如下：
+
+
+
+
+
+
+
+
 
 
 
