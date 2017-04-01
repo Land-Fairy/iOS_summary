@@ -246,7 +246,7 @@ void myeatMethodIMP(id self, SEL _cmd){
 > 成员变量是一个类的东西，分类本身就不是一个类，分类本来就是OC里面通过运行时动态的为一个类添加的一些方法和属性等，不是一个真正的类
 > 类最开始生成了很多基本属性，比如IvarList，MethodList，分类只会将自己的method attach到主类，并不会影响到主类的IvarList
 
-- 那么，如何给 分类 添加属性呢？
+### 3.2 那么，如何给 分类 添加属性呢？
 - 取巧方式
 > 可以通过 重写 setter 和 getter方法，并且 用一个静态变量来 充当 ”_成员变量“
 
@@ -272,7 +272,47 @@ static NSString *_castStrTest;
 ```
 > 发现在外边直接使用 . 语法也不会造成错误
 
+- RunTime 方式
+> 使用 RunTime 方式，其基本原理即使:
+> * 通过一个  key 与对象 相关联，与该key对应会保存一个值
+> * getter就是 取出 该对象 对应 该key 的 数值
+> * setter就是 通过该 key，保存到 对象 中
+> 与 上面 使用静态变量 ，感觉 很相似，都不是实际 添加一个 _成员变量
 
+
+
+```
+#import "DBDPerson+cate.h"
+#import <objc/message.h>
+/**
+ *  定义关联的 key
+ */
+static const char *key = "cateStrTest";
+@implementation DBDPerson (cate)
+
+- (NSString *)cateStrTest{
+    /**
+     *  根据  key  获取 关联的 值
+     */
+    return objc_getAssociatedObject(self, key);
+}
+
+- (void)setCateStrTest:(NSString *)cateStrTest{
+    /**
+     *  第一个参数：给哪个对象添加关联
+        第二个参数：关联的key，通过这个key获取
+        第三个参数：关联的value
+        第四个参数:关联的策略
+     */
+    objc_setAssociatedObject(self, key, cateStrTest, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+@end
+
+```
+> 再次打印：
+![](/assets/QQ20170401-232718.png)
+> 发现：runtime 方式 也没有 添加 _成员变量
 
 
 
