@@ -73,11 +73,7 @@ void myeatMethodIMP(id self, SEL _cmd){
 
 ![](/assets/QQ20170401-211855.png)
 
-
-
 * 交换后的 方法结构
 
-
-
-
+![](/assets/QQ20170401-212532.png)
 
