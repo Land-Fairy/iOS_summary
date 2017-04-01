@@ -216,9 +216,11 @@ void myeatMethodIMP(id self, SEL _cmd){
 
 ```
 > 打印结果如下：
+![](/assets/QQ20170401-224432.png)
 
-
-
+> 通过 分析 上面 打印结果发现
+> * 使用property 在 类里面 会自动生成 _的成员变量
+> * 使用property 在 类里面 还会自动生成 对应的 setter 和 getter 方法
 
 
 
