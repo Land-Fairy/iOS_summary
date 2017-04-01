@@ -10,7 +10,7 @@
 
 ```
 DBDPerson *person = [[DBDPerson alloc] init];
-    
+
 objc_msgSend(person,@selector(eat));
 ```
 
@@ -23,8 +23,10 @@ objc_msgSend(person,@selector(eat));
 > * 如果 找到了 IMP 方法名，则 通过IMP（实质就是 对应实现的地址） 可以找到 对应的实现；然后调用该实现即可
 > * 如果 没有 找到 IMP 方法名，则 会调用
 >
-> `+ (BOOL)resolveInstanceMethod:(SEL)sel`
+> `+ (BOOL)resolveInstanceMethod:(SEL)sel`  
 > 如果  该 方法 返回的 为 NO（即没有自行处理）,则 会 通过 类对象的 isa 去其 父对象 中进行 继续查找（消息转发）
+
+> 因此，可以在上述 方法 中 ，动态 添加方法即可
 
 
 
