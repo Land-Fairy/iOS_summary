@@ -75,6 +75,66 @@ void myeatMethodIMP(id self, SEL _cmd){
 >
 > 在分类中 重写一个 方法，然后 使用  重写的方法 即可
 
+```
+- (instancetype)dbd_imageNamed:(NSString *)imgStr{
+    UIImage *img = [UIImage imageNamed:imgStr];
+    /**
+     *  做 其他 处理
+     */
+    return img;
+}
+```
+
+> 但是，如果 很多地方 都用到了 imageNamed: 方法，则需要每个地方都修改，每个地方都导入 分类 头文件，很麻烦
+>
+> * 可以 交换 两个方法的实现即可
+
+```
+#import "UIImage+dbdImageNamed.h"
+#import <objc/message.h>
+@implementation UIImage (dbdImageNamed)
+/**
+ *  load 方法 在类 第一次加载的时候 调用
+ *  在整个文件被加载到运行时，在 main 函数调用之前被 ObjC 运行时调用的钩子方法
+ */
++ (void)load{
+    /**
+     *  随翻 load 方法 只会被 调用 一次， 但是仍然要确保 方法 交换 只会执行一次
+     */
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        /**
+         *  获取 类 的 类 方法
+         *  应该 获取 类的  类方法 还是 实例方法，取决于 需要交换的类是  类方法 还是  实例方法
+         */
+        Method imagIMP = class_getClassMethod([self class], @selector(imageNamed:));
+        
+        Method dbd_imagIMP = class_getClassMethod([self class], @selector(dbd_imageNamed:));
+        /**
+         *  交换 两个 方法
+         */
+        method_exchangeImplementations(imagIMP, dbd_imagIMP);
+    });
+}
+
+
++ (instancetype)dbd_imageNamed:(NSString *)imgStr{
+    /**
+     *  注意： 此时 调用 dbd_imageNamed,实际 上 调用的 是 imageNamed 的实现
+     */
+    UIImage *img = [UIImage dbd_imageNamed:imgStr];
+    /**
+     *  做 其他 处理
+     */
+    NSLog(@"dgdgg");
+    return img;
+}
+
+@end
+```
+
+> 此时：在原来地方 调用 ImageNamed: 方法，发现实际上执行的 确实 我们 新的方法
+
 * 原来 方法 结构
 
 ![](/assets/QQ20170401-211855.png)
