@@ -222,6 +222,25 @@ void myeatMethodIMP(id self, SEL _cmd){
 > * 使用property 在 类里面 会自动生成 _的成员变量
 > * 使用property 在 类里面 还会自动生成 对应的 setter 和 getter 方法
 
+- @property 在 分类中 又做了什么呢？
+> 我们为 DBDPerson 创建一个分类，并在分类中使用property添加一个属性
+
+
+```
+#import "DBDPerson.h"
+
+@interface DBDPerson (cate)
+@property (nonatomic, strong) NSString *cateStrTest;
+@end
+
+```
+> 使用上面的方法 重新打印
+![](/assets/QQ20170401-225802.png)
+> 分析上图发现：
+> * 分类中 使用 property 不会自动生成 _成员变量
+> * 不会自动生成 get 和 set 方法
+
+
 
 
 
