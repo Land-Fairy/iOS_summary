@@ -77,3 +77,35 @@ void myeatMethodIMP(id self, SEL _cmd){
 
 ![](/assets/QQ20170401-212532.png)
 
+> 即：此时 如果 调用 imageNamed：方法，则 会直接 找到  dbd_imageNamed：方法的实现；相当于 原来调用 dbd\_imageNamed方法_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
