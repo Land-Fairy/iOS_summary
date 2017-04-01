@@ -69,6 +69,12 @@ void myeatMethodIMP(id self, SEL _cmd){
 > * 可以通过 重新写一个 满足需求的方法，让 需要替换的方法 和 此方法 进行 交换实现
 > * 这样 在使用 老方法的时候，实际上 调用的 是 新的方法
 
+* 替换 原来的 imageNmaged 方法
+
+> 比如：原来的 需要 在 imageNamed 得到的图片 进行一些处理，则 一种 办法是 给UIImage 添加一个分类，
+>
+> 在分类中 重写一个 方法，然后 使用  重写的方法 即可
+
 * 原来 方法 结构
 
 ![](/assets/QQ20170401-211855.png)
@@ -78,34 +84,6 @@ void myeatMethodIMP(id self, SEL _cmd){
 ![](/assets/QQ20170401-212532.png)
 
 > 即：此时 如果 调用 imageNamed：方法，则 会直接 找到  dbd_imageNamed：方法的实现；相当于 原来调用 dbd\_imageNamed方法_
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
