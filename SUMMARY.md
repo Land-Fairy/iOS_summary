@@ -82,4 +82,9 @@
     * [position](chapter21-动画/position.md)
     * [core animation](chapter21-动画/core animation.md)
     * [隐式动画](chapter21-动画/隐式动画.md)
+* [二十二.彩票项目](chapter22-彩票项目/README.md)
+    * [彩票](chapter22-彩票项目/彩票.md)
+    * [cai](chapter22-彩票项目/Caipiao.md)
+* [二十三.妹子](chapter23-meizi/README.md)
+    * [妹子](chapter23-meizi/Meizi.md)
 

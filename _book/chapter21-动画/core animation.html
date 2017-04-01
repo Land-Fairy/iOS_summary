@@ -1321,6 +1321,7 @@
 <p>3&gt; &#x81EA;&#x52A8;&#x5728;&#x540E;&#x53F0;&#x7EBF;&#x7A0B;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x963B;&#x585E; &#x4E3B;&#x7EBF;&#x7A0B;</p>
 </blockquote>
 <h3 id="11-&#x7EE7;&#x627F;&#x7ED3;&#x6784;">1.1 &#x7EE7;&#x627F;&#x7ED3;&#x6784;</h3>
+<p><img src="../assets/QQ20170322-091933.png" alt="QQ20170322-091933"></p>
 <h3 id="12-&#x4F7F;&#x7528;">1.2 &#x4F7F;&#x7528;</h3>
 <blockquote>
 <p>1&gt; CAAnimation  &#x76F8;&#x5F53;&#x4E8E; &#x521B;&#x5EFA;&#x4E00;&#x4E2A; &#x52A8;&#x753B;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E; &#x544A;&#x8BC9;&#x8FD9;&#x4E2A; &#x52A8;&#x753B; &#x5BF9;&#x8C61; &#x600E;&#x4E48;&#x4FEE;&#x6539; CALayer &#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;&#x5176;&#x77E5;&#x9053; &#x600E;&#x6837; &#x8FBE;&#x5230; &#x52A8;&#x753B;&#x7684;&#x6548;&#x679C;</p>
@@ -1347,6 +1348,137 @@
      */
     [self.redView.layer addAnimation:anim forKey:nil];
 </code></pre>
+<h3 id="13-caanimation">1.3 CAAnimation</h3>
+<blockquote>
+<p>1&gt; &#x6240;&#x6709;&#x52A8;&#x753B;&#x5BF9;&#x8C61;&#x7684; &#x7236;&#x7C7B;&#xFF0C;&#x662F;&#x62BD;&#x8C61;&#x7C7B;&#xFF0C;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x4F7F;&#x7528;</p>
+</blockquote>
+<h4 id="131&#x5C5E;&#x6027;">1.3.1&#x5C5E;&#x6027;</h4>
+<ul>
+<li>duration</li>
+</ul>
+<blockquote>
+<p>&#x52A8;&#x753B;&#x6301;&#x7EED;&#x65F6;&#x95F4; </p>
+</blockquote>
+<ul>
+<li>repeatCount</li>
+</ul>
+<blockquote>
+<p>&#x91CD;&#x590D;&#x6B21;&#x6570; &#x3002; MAXFLOAT &#x4EE3;&#x8868; &#x65E0;&#x7EBF;&#x5FAA;&#x73AF;</p>
+</blockquote>
+<ul>
+<li>repeatDuration</li>
+</ul>
+<blockquote>
+<p>&#x91CD;&#x590D;&#x65F6;&#x95F4;</p>
+</blockquote>
+<ul>
+<li>removedOnCompletion</li>
+</ul>
+<blockquote>
+<p>&#x4EE3;&#x8868; &#x52A8;&#x753B;&#x6267;&#x884C; &#x5B8C;&#x6BD5;&#x4E4B;&#x540E;&#x5C31;&#x4ECE; &#x56FE;&#x5C42;&#x4E0A;&#x79FB;&#x9664;&#xFF0C;&#x6062;&#x590D;&#x5230; &#x52A8;&#x753B; &#x524D; &#x72B6;&#x6001;</p>
+<p>&#x5982;&#x679C;&#x9700;&#x8981; &#x4FDD;&#x6301; &#x52A8;&#x753B; &#x6267;&#x884C;&#x540E;&#x7684;&#x72B6;&#x6001;</p>
+<p>1&gt; &#x8BE5;&#x5C5E;&#x6027; &#x8BBE;&#x7F6E; &#x4E3A;  NO</p>
+<p>2&gt; &#x8BBE;&#x7F6E; fillModel &#x4E3A; kCAFillModeForwards</p>
+</blockquote>
+<ul>
+<li>fillMode</li>
+</ul>
+<blockquote>
+<p>&#x51B3;&#x5B9A;&#x5F53;&#x524D;&#x5BF9;&#x8C61; &#x5728;&#x975E; active &#x65F6;&#x95F4;&#x6BB5;&#x7684;&#x884C;&#x4E3A;</p>
+</blockquote>
+<ul>
+<li>beginTime</li>
+</ul>
+<blockquote>
+<p>&#x53EF;&#x7528;&#x6765;&#x8BBE;&#x7F6E; &#x52A8;&#x753B;&#x5EF6;&#x8FDF;&#x6267;&#x884C;&#x65F6;&#x95F4;</p>
+</blockquote>
+<ul>
+<li>timingFunction</li>
+</ul>
+<blockquote>
+<p>&#x901F;&#x5EA6;&#x63A7;&#x5236;&#x51FD;&#x6570;</p>
+</blockquote>
+<ul>
+<li>delegate</li>
+</ul>
+<blockquote>
+<p>&#x4EE3;&#x7406;</p>
+</blockquote>
+<h3 id="14-capropertyanimation">1.4 CAPropertyAnimation</h3>
+<blockquote>
+<p>&#x4E5F;&#x662F;&#x62BD;&#x8C61;&#x7C7B;&#xFF0C;&#x7EE7;&#x627F;&#x81EA; CAAnimation</p>
+</blockquote>
+<h4 id="141-&#x5C5E;&#x6027;">1.4.1 &#x5C5E;&#x6027;</h4>
+<ul>
+<li>keyPath</li>
+</ul>
+<blockquote>
+<p>&#x7C7B;&#x4F3C; KVC&#x3002;&#x6307;&#x5B9A; CALayer&#x7684;&#x5C5E;&#x6027;&#x540D; &#x5BF9;&#x5176; &#x5C5E;&#x6027; &#x8FDB;&#x884C;&#x4FEE;&#x6539;</p>
+</blockquote>
+<h3 id="15-cabasicanimation">1.5 CABasicAnimation</h3>
+<h4 id="151-&#x5C5E;&#x6027;">1.5.1 &#x5C5E;&#x6027;</h4>
+<ul>
+<li>formValue</li>
+</ul>
+<blockquote>
+<p>keyPath &#x76F8;&#x5E94;&#x7684; &#x5C5E;&#x6027; &#x521D;&#x59CB;&#x503C;</p>
+</blockquote>
+<ul>
+<li>toValue</li>
+</ul>
+<blockquote>
+<p>keyPath &#x76F8;&#x5E94;&#x7684; &#x5C5E;&#x6027; &#x7ED3;&#x675F;&#x503C;</p>
+</blockquote>
+<ul>
+<li>&#x5B9E;&#x8D28;</li>
+</ul>
+<blockquote>
+<p>&#x5728;&#x957F;&#x5EA6; &#x4E3A; duration &#x7684;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x5185;&#xFF0C;keyPath &#x4ECE; fromValue &#x53D8;&#x4E3A; toValue</p>
+</blockquote>
+<h3 id="16-cakeyframeanimation">1.6 CAKeyframeAnimation</h3>
+<blockquote>
+<p>CABasicAnimation&#x7684;&#x5347;&#x7EA7;&#x7248;</p>
+</blockquote>
+<h4 id="161-&#x5C5E;&#x6027;">1.6.1 &#x5C5E;&#x6027;</h4>
+<ul>
+<li>values</li>
+</ul>
+<blockquote>
+<p>1&gt; &#x662F;&#x4E00;&#x4E2A;NSArray&#x5BF9;&#x8C61;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x6210;&#x4E3A; &quot;&#x5173;&#x952E;&#x5E27;&quot;(keyframe)</p>
+<p>2&gt; &#x6307;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x5185;&#xFF0C;&#x4F9D;&#x6B21;&#x663E;&#x793A; values&#x6570;&#x7EC4;&#x4E2D;&#x7684; &#x6BCF;&#x4E00;&#x4E2A; &#x5173;&#x952E;&#x5E27;</p>
+</blockquote>
+<ul>
+<li>keyTimes</li>
+</ul>
+<blockquote>
+<p>&#x4E3A; values &#x4E2D;&#x7684;&#x5173;&#x952E;&#x5E27; &#x6307;&#x5B9A; &#x5BF9;&#x5E94;&#x7684; &#x65F6;&#x95F4;&#x70B9;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4; &#x4ECE;0&#x5230;1.0</p>
+<p>&#x6BCF;&#x4E2A;keyTime &#x90FD;&#x5BF9;&#x5E94; values &#x4E2D;&#x7684; &#x6BCF;&#x4E00;&#x5E27;</p>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#xFF0C;&#x5404;&#x4E2A; &#x5173;&#x952E;&#x5E27; &#x65F6;&#x95F4; &#x5E73;&#x5206;</p>
+</blockquote>
+<ul>
+<li>path</li>
+</ul>
+<blockquote>
+<p>1&gt; &#x901A;&#x8FC7;&#x8BBE;&#x7F6E; CGPathRef &#x548C; CGMutablePathRef&#x7B49;&#xFF0C;&#x8BA9;&#x56FE;&#x5C42; &#x5B89;&#x88C5; &#x8DEF;&#x5F84;&#x8F68;&#x8FF9;&#x8FDB;&#x884C;&#x79FB;&#x52A8;</p>
+<p>2&gt; path &#x4F18;&#x5148;&#x7EA7; &#x5927;&#x4E8E; values&#xFF08;&#x8BBE;&#x7F6E;path&#xFF0C;values &#x88AB;&#x5FFD;&#x7565;&#xFF09;</p>
+</blockquote>
+<h3 id="17-caanimationgroup">1.7 CAAnimationGroup</h3>
+<blockquote>
+<p>1&gt; &#x7528;&#x6765;&#x4FDD;&#x5B58;&#x4E00;&#x7EC4;&#x52A8;&#x753B;&#x5BF9;&#x8C61;&#xFF0C;&#x4F7F;&#x5176;&#x540C;&#x65F6;&#x5E76;&#x53D1;&#x8FD0;&#x884C;</p>
+<p>2&gt; &#x9700;&#x8981;&#x5C06; &#x5176; &#x52A0;&#x5165; &#x5C42;</p>
+</blockquote>
+<h4 id="171-&#x5C5E;&#x6027;">1.7.1 &#x5C5E;&#x6027;</h4>
+<ul>
+<li>animations</li>
+</ul>
+<blockquote>
+<p>1&gt;&#x7528;&#x6765;&#x4FDD;&#x5B58;&#x4E00;&#x7EC4; &#x52A8;&#x753B;&#x5BF9;&#x8C61;</p>
+<p>2&gt; NSArray</p>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E00;&#x7EC4;&#x52A8;&#x753B;&#x662F; &#x540C;&#x65F6;&#x8FD0;&#x884C;&#x7684;</p>
+<p>&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E; &#x52A8;&#x753B;&#x5BF9;&#x8C61; &#x7684;  beginTime  &#x6765; &#x66F4;&#x6539; &#x5F00;&#x59CB; &#x65F6;&#x95F4;</p>
+</blockquote>
+<h4 id=""> </h4>
+<h4 id=""> </h4>
 
                                 
                                 </section>
@@ -1390,7 +1522,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"core animation","level":"1.22.5","depth":2,"next":{"title":"隐式动画","level":"1.22.6","depth":2,"path":"chapter21-动画/隐式动画.md","ref":"chapter21-动画/隐式动画.md","articles":[]},"previous":{"title":"position","level":"1.22.4","depth":2,"path":"chapter21-动画/position.md","ref":"chapter21-动画/position.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter21-动画/core animation.md","mtime":"2017-03-14T04:29:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-16T13:05:11.244Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"core animation","level":"1.22.5","depth":2,"next":{"title":"隐式动画","level":"1.22.6","depth":2,"path":"chapter21-动画/隐式动画.md","ref":"chapter21-动画/隐式动画.md","articles":[]},"previous":{"title":"position","level":"1.22.4","depth":2,"path":"chapter21-动画/position.md","ref":"chapter21-动画/position.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter21-动画/core animation.md","mtime":"2017-03-22T01:53:43.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-01T08:53:17.086Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
