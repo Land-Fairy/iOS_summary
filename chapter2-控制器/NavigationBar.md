@@ -112,7 +112,7 @@ self.navigationItem.leftBarButtonItem =
 > 透明状态下：
 >
 > * 默认 view 的 起点 是 屏幕 顶部，view 的大小 为 屏幕的大小
-
+>
 > 不透明状态下：
 >
 > * 默认 view 的起点是 \(0,64\)即 导航栏底部（放置遮盖）,view 的 大小为 \(ScreenW ， ScreenH - 64\)
@@ -121,7 +121,22 @@ self.navigationItem.leftBarButtonItem =
 
 > ```
 > self.extendedLayoutIncludesOpaqueBars = YES;
+> 这样，view的起点 与 大小 又会 与 透明状态下 一致
 > ```
+
+## 4. 如何 去除 导航栏底部的 横线
+
+* 底部横线？？
+
+> 导航如果不设置背景图片，那么 会自动 生成一个 背景图片 放在下面，并设置 一个 底部阴影 view
+>
+> * 底部横线 就是 默认的 那个 底部阴影 view
+
+* 如何 去除
+
+> 如果想要修改 底部阴影 view，那么 首先 需要 自己设置一个 背景 图片
+>
+> 然后，将 底部阴影 view 的image 设置为一个\[\[UIImage alloc\] init\]即可
 
 
 
