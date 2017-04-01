@@ -239,6 +239,35 @@ void myeatMethodIMP(id self, SEL _cmd){
 > 分析上图发现：
 > * 分类中 使用 property 不会自动生成 _成员变量
 > * 不会自动生成 get 和 set 方法
+> * 因此：在外面直接调用.语法便会造成错误
+
+- 那么，如何给 分类 添加属性呢？
+- 取巧方式
+> 可以通过 重写 setter 和 getter方法，并且 用一个静态变量来 充当 ”_成员变量“
+
+
+
+```
+#import "DBDPerson+cate.h"
+
+@implementation DBDPerson (cate)
+/**
+ *  定义一个全局变量 来充当 _成员变量的作用
+ */
+static NSString *_castStrTest;
+
+- (NSString *)cateStrTest{
+    return _castStrTest;
+}
+- (void)setCateStrTest:(NSString *)cateStrTest{
+    _castStrTest = cateStrTest;
+}
+@end
+
+```
+> 发现在外边直接使用 . 语法也不会造成错误
+
+
 
 
 
