@@ -152,10 +152,8 @@ void myeatMethodIMP(id self, SEL _cmd){
 
 ### 3.1 分类为什么不能直接添加属性
 
-- @property 在 类 中做了什么？
-> 我们为 DBDPerson类 添加了一些 成员变量 和 属性，然后 打印一下 该类 的 成员变量，属性和方法
-
-
+* @property 在 类 中做了什么？
+  > 我们为 DBDPerson类 添加了一些 成员变量 和 属性，然后 打印一下 该类 的 成员变量，属性和方法
 
 ```
 {
@@ -167,11 +165,9 @@ void myeatMethodIMP(id self, SEL _cmd){
 @property (nonatomic, strong) NSString *st3;
 @property (nonatomic, strong) NSString *st4;
 @property (nonatomic, assign) NSInteger va1;
-
 ```
+
 > 然后 写一个 方法，来打印：使用的是RunTime
-
-
 
 ```
 + (void)getPropertyUsingRunTime{
@@ -186,7 +182,7 @@ void myeatMethodIMP(id self, SEL _cmd){
             NSLog(@"property---%s  %s",property_getName(property),property_getAttributes(property));
         }
     }
-    
+
     /**
      *  获取 该 类中 的 所有 成员变量
      */
@@ -210,21 +206,22 @@ void myeatMethodIMP(id self, SEL _cmd){
             NSLog(@"fangfa----%@",NSStringFromSelector(method_getName(method)));
         }
     }
-    
+
 }
-
-
 ```
+
 > 打印结果如下：
+
+  
 ![](/assets/QQ20170401-224432.png)
 
-> 通过 分析 上面 打印结果发现
-> * 使用property 在 类里面 会自动生成 _的成员变量
+> 通过 分析 上面 打印结果发现:
+
+> * 使用property 在 类里面 会自动生成 \_的成员变量
 > * 使用property 在 类里面 还会自动生成 对应的 setter 和 getter 方法
 
-- @property 在 分类中 又做了什么呢？
-> 我们为 DBDPerson 创建一个分类，并在分类中使用property添加一个属性
-
+* @property 在 分类中 又做了什么呢？
+  > 我们为 DBDPerson 创建一个分类，并在分类中使用property添加一个属性
 
 ```
 #import "DBDPerson.h"
@@ -232,25 +229,29 @@ void myeatMethodIMP(id self, SEL _cmd){
 @interface DBDPerson (cate)
 @property (nonatomic, strong) NSString *cateStrTest;
 @end
-
 ```
+
 > 使用上面的方法 重新打印
-![](/assets/QQ20170401-225802.png)
+
+  
+![](/assets/QQ20170401-225802.png)  
+
+
 > 分析上图发现：
-> * 分类中 使用 property 不会自动生成 _成员变量
+
+> * 分类中 使用 property 不会自动生成 \_成员变量
 > * 不会自动生成 get 和 set 方法
 > * 因此：在外面直接调用.语法便会造成错误
 
-- 总结：
-> 其实分类中是可以为一个类添加属性的，但是一定做不到添加成员变量，不要混淆了成员变量和属性的概念
-> 成员变量是一个类的东西，分类本身就不是一个类，分类本来就是OC里面通过运行时动态的为一个类添加的一些方法和属性等，不是一个真正的类
-> 类最开始生成了很多基本属性，比如IvarList，MethodList，分类只会将自己的method attach到主类，并不会影响到主类的IvarList
+* 总结：
+  > 其实分类中是可以为一个类添加属性的，但是一定做不到添加成员变量，不要混淆了成员变量和属性的概念  
+  > 成员变量是一个类的东西，分类本身就不是一个类，分类本来就是OC里面通过运行时动态的为一个类添加的一些方法和属性等，不是一个真正的类  
+  > 类最开始生成了很多基本属性，比如IvarList，MethodList，分类只会将自己的method attach到主类，并不会影响到主类的IvarList
 
 ### 3.2 那么，如何给 分类 添加属性呢？
-- 取巧方式
-> 可以通过 重写 setter 和 getter方法，并且 用一个静态变量来 充当 ”_成员变量“
 
-
+* 取巧方式
+  > 可以通过 重写 setter 和 getter方法，并且 用一个静态变量来 充当 ”\_成员变量“
 
 ```
 #import "DBDPerson+cate.h"
@@ -268,18 +269,17 @@ static NSString *_castStrTest;
     _castStrTest = cateStrTest;
 }
 @end
-
 ```
+
 > 发现在外边直接使用 . 语法也不会造成错误
 
-- RunTime 方式
-> 使用 RunTime 方式，其基本原理即使:
-> * 通过一个  key 与对象 相关联，与该key对应会保存一个值
-> * getter就是 取出 该对象 对应 该key 的 数值
-> * setter就是 通过该 key，保存到 对象 中
-> 与 上面 使用静态变量 ，感觉 很相似，都不是实际 添加一个 _成员变量
-
-
+* RunTime 方式
+  > 使用 RunTime 方式，其基本原理即使:
+  >
+  > * 通过一个  key 与对象 相关联，与该key对应会保存一个值
+  > * getter就是 取出 该对象 对应 该key 的 数值
+  > * setter就是 通过该 key，保存到 对象 中
+  >   与 上面 使用静态变量 ，感觉 很相似，都不是实际 添加一个 \_成员变量
 
 ```
 #import "DBDPerson+cate.h"
@@ -308,17 +308,14 @@ static const char *key = "cateStrTest";
 }
 
 @end
-
 ```
+
 > 再次打印：
+
+  
 ![](/assets/QQ20170401-232718.png)
-> 发现：runtime 方式 也没有 添加 _成员变量
 
-
-
-
-
-
+&gt;  发现：runtime 方式 也没有 添加 \_成员变量
 
 
 
