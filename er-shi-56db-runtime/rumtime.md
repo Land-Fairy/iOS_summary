@@ -370,4 +370,18 @@ static const char *key = "cateStrTest";
 > 打印结果 如下:
 ![](/assets/QQ20170402-084509.png)
 
+### 4.2 KVC 方式 字典 转 模型
+- 用处
+> 当 模型中 属性  与 字典中 key 完全一致，或者说 字典中的key在模型中都有属性对应
 
+
+```
+[status setValuesForKeysWithDictionary:dict];
+
+```
+- 缺点：
+> 一般 服务器返回的数据中key都比较多，有很多用不到，因此 模型与字典不对应
+> 如果不一致，就会调用[<Status 0x7fa74b545d60> setValue:forUndefinedKey:] 报key找不到的错。
+
+- 解决：
+> 既然会调用 setValue:forUndefinedKey: 方法，则可以进行重写，覆盖掉系统的报错 ；或者在里面童工
