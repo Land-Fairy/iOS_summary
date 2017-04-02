@@ -324,3 +324,50 @@ static const char *key = "cateStrTest";
 - 可以通过 给 NSObject 添加一个分类，该分类 根据 字典 打印需要定义的字符串
 
 
+
+```
+#import "NSObject+GenerateProperty.h"
+
+@implementation NSObject (GenerateProperty)
++ (void)generateProperyUsingDictionary:(NSDictionary *)dict{
+    
+    [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        //NSLog(@"%@",[obj class]);
+        /**
+         *  首先 辨别 数据的类型
+         */
+        NSString *type = nil;
+        if ([obj isKindOfClass:NSClassFromString(@"__NSCFString")]) {
+            type = @"NSString *";
+        }
+        else if([obj isKindOfClass:NSClassFromString(@"__NSCFNumber")]){
+            type = @"NSInteger ";
+        }
+        else if ([obj isKindOfClass:NSClassFromString(@"__NSCFArray")]){
+            type = @"NSArray *";
+        }
+        else if ([obj isKindOfClass:NSClassFromString(@"__NSCFDictionary")]){
+            type = @"NSDictionary ";
+        }
+        /**
+         *  拼接 成 @property (nonatomic, strong) type name;
+         */
+        if ([type containsString:@"NSInteger"]) {
+            NSLog(@"@property (nonatomic, assign) %@%@",type,key);
+        }
+        else{
+            NSLog(@"@property (nonatomic, strong) %@%@",type,key);
+        }
+        
+    }];
+    
+    
+}
+@end
+
+
+```
+> 打印结果 如下:
+![](/assets/QQ20170402-084509.png)
+
+
